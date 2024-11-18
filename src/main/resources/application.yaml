@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: wms-bb
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+        bindings:
+          imageProcessor-in-0:
+            destination: image-topic
+
+  aws:
+    credentials:
+      access-key: YOUR-AWS-ACCESS-KEY
+      secret-key: YOUR-AWS-SECRET-KEY
+    region:
+      static: YOUR-AWS-REGION
+    s3:
+      bucket: YOUR-S3-BUCKET'
+
+  minio:
+    url: http://localhost:9000
+    access-key: YOUR-MINIO-ACCESS-KEY
+    secret-key: YOUR-MINIO-SECRET-KEY
+    buket: images
+
+
