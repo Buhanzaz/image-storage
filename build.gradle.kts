@@ -4,7 +4,7 @@ plugins {
     id("io.spring.dependency-management") version "1.1.6"
 }
 
-group = "com.blocbox"
+group = "com.blockBox"
 version = "0.0.1-SNAPSHOT"
 
 java {
@@ -25,20 +25,29 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webflux")
-    implementation("org.springframework.boot:spring-cloud-starter-stream-kafka")
     implementation("software.amazon.awssdk:s3:2.29.15")
     implementation("io.minio:minio:8.5.13")
     implementation("net.coobird:thumbnailator:0.4.20")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
 
-    implementation("org.apache.kafka:kafka-streams")
+    runtimeOnly("software.amazon.awssdk:bom:2.29.15")
+
     compileOnly("org.projectlombok:lombok")
+
     developmentOnly("org.springframework.boot:spring-boot-devtools")
+
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     annotationProcessor("org.projectlombok:lombok")
+
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
+    implementation("software.amazon.awssdk:s3:2.29.15")
+    implementation("software.amazon.awssdk:netty-nio-client:2.29.15")
+    implementation("com.twelvemonkeys.imageio:imageio-jpeg:3.12.0")
+
+
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-    implementation("io.projectreactor.kafka:reactor-kafka:1.3.23")
+
 
 }
 

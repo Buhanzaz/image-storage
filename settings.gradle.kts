@@ -1,1 +1,1 @@
-rootProject.name = "wms-bb"
+rootProject.name = "imageStorage"

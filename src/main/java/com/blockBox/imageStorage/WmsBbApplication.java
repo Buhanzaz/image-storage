@@ -1,4 +1,4 @@
-package com.blocbox.wmsbb;
+package com.blockBox.imageStorage;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

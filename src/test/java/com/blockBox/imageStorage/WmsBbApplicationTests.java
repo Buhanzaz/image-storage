@@ -1,4 +1,4 @@
-package com.blocbox.wmsbb;
+package com.blockBox.imageStorage;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
